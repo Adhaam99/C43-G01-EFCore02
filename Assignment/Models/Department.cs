@@ -16,9 +16,7 @@ namespace Assignment.Models
         [Column("Name", TypeName = "varchar(50)")]
         [Length(3, 50)]
         public string? Name { get; set; }
-        [ForeignKey(nameof(Department.Ins_ID))]
         public int Ins_ID { get; set; }
-
-
+        public DateOnly HiringDate { get; set; }
     }
 }

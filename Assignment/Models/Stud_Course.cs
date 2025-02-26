@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -11,11 +12,9 @@ namespace Assignment.Models
     [PrimaryKey("Stud_ID" , "Course_ID")]
     class Stud_Course
     {
-        [ForeignKey(nameof(Student.ID))]
         public int Stud_ID { get; set; }
-
-        [ForeignKey(nameof(Course.ID))]
         public int Course_ID { get; set; }
+        [Range(0, 100)]
         public int Grade { get; set; }
     }
 }

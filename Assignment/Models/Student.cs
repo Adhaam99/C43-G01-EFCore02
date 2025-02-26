@@ -10,15 +10,17 @@ namespace Assignment.Models
 {
     class Student
     {
+        [Key]
         public int ID { get; set; }
+
+        [Length(3 , 50)]
+        [Required]
         public string? FName { get; set; }
         public string? LName { get; set; }
         public string? Address { get; set; }
 
         [Range(22 , 40)]
         public int Age { get; set; }
-
-        [ForeignKey(nameof())]
         public int Dept_ID { get; set; }
 
     }

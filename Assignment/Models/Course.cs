@@ -23,8 +23,6 @@ namespace Assignment.Models
 
         [Column("Description", TypeName = "nvarchar(Max)")]
         public string? Description { get; set; }
-
-        [ForeignKey(nameof(Topic.ID))]
         public int Top_ID { get; set; }
 
 
