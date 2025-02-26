@@ -22,6 +22,8 @@ namespace Assignment.Models
         [Range(22 , 40)]
         public int Age { get; set; }
         public int Dept_ID { get; set; }
+        public Department Department { get; set; } = new Department();
+        public ICollection<Stud_Course> Stud_Courses { get; set; } = new HashSet<Stud_Course>();
 
     }
 }

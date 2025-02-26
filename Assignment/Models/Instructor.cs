@@ -24,7 +24,9 @@ namespace Assignment.Models
         [Column("HourRate", TypeName = "decimal(10,2)")]
         public decimal HourRate { get; set; }
         public int Dep_ID { get; set; }
-
+        public Department? ManagedDepartment { get; set; }
+        public Department Department { get; set; } = new Department();
+        public ICollection<Course_Inst> Course_Insts { get; set; } = new HashSet<Course_Inst>();
 
     }
 }
