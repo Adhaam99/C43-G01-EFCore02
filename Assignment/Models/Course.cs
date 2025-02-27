@@ -24,7 +24,7 @@ namespace Assignment.Models
         [Column("Description", TypeName = "nvarchar(Max)")]
         public string? Description { get; set; }
         public int Top_ID { get; set; }
-        public Topic Topic { get; set; } = new Topic();
+        public Topic Topic { get; set; } = null!;
         public ICollection<Stud_Course> Stud_Courses { get; set; } = new HashSet<Stud_Course>();
         public ICollection<Course_Inst> Course_Insts { get; set; } = new HashSet<Course_Inst>();    
 

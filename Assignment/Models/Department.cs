@@ -22,7 +22,7 @@ namespace Assignment.Models
 
         [Required]
         [InverseProperty(nameof(Instructor.Department))]
-        public Instructor Manager { get; set; }
+        public Instructor Manager { get; set; } = null!;
         public ICollection<Instructor> Instructors { get; set; } = new HashSet<Instructor>();
         public ICollection<Student> Students { get; set; } = new HashSet<Student>();
 

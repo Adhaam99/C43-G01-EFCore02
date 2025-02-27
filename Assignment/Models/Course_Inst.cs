@@ -11,9 +11,9 @@ namespace Assignment.Models
     class Course_Inst
     {
         public int Inst_ID { get; set; }
-        public Instructor Instructor { get; set; } = new Instructor();
+        public Instructor Instructor { get; set; } = null!;
         public int Course_ID { get; set; }
-        public Course Course { get; set; } = new Course();
+        public Course Course { get; set; } = null!;
         public int Evaluation { get; set; }
 
 
